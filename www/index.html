@@ -4,7 +4,7 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		
 		
-		<!-- <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script> -->
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
 		<script src="js/pgb.js"></script>
@@ -54,8 +54,7 @@
 
   var provider = new firebase.auth.GoogleAuthProvider();
 
-function signin(){
-
+document.querySelector('#googleLogIn').addEventListener('click', function () {
 firebase.auth().signInWithRedirect(provider).then(function() {
   return firebase.auth().getRedirectResult();
 }).then(function(result) {
@@ -70,7 +69,7 @@ firebase.auth().signInWithRedirect(provider).then(function() {
   var errorCode = error.code;
   var errorMessage = error.message;
 });
-}
+});
     
 // document.querySelector('#googleLogIn').addEventListener('click', function () {
 //     // provider.addScope('profile');
