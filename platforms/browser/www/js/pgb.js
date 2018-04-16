@@ -6,7 +6,7 @@ function onDeviceReady() {
 	
     console.log(navigator.contacts);
 
-    var config = {
+     var config = {
     apiKey: "AIzaSyD4EQnrBQVllUnqf-d4mFKdp8-A30ijO5w",
     authDomain: "test-cordova-e76a7.firebaseapp.com",
     databaseURL: "https://test-cordova-e76a7.firebaseio.com",
@@ -16,30 +16,6 @@ function onDeviceReady() {
   };
   firebase.initializeApp(config);
 
-
-  const provider = new firebase.auth.GoogleAuthProvider();
-    
-document.querySelector('#googleLogIn').addEventListener('click', function () {
-    provider.addScope('profile');
-    provider.addScope('email');
-  firebase.auth().signInWithRedirect(provider).then(function() {
-  return firebase.auth().getRedirectResult();
-}).then(function(result) {
-  // This gives you a Google Access Token.
-  // You can use it to access the Google API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-
-    
-
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-});
-}); 
 }
 
 function deviceInfo() {
