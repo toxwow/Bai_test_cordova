@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns   = "http://www.w3.org/ns/widgets"
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+		id          = "myfirstapp"
+        version     = "1.0.0" >
+	<icon src="www/img/icon.png" />
+    <name>Łed</name>
+    <description>My first mobile app</description>
+    <author href="http://mypersonalwebsite.com" email="johnbrown@gmail.com">
+		John Brown
+	</author>
+	<platform name="android" >
+	
+	<splash platform="android" qualifier="port-ldpi" src="res/screens/android/drawable-port-ldpi-screen.png" />
+	<splash platform="android" qualifier="port-mdpi" src="res/screens/android/drawable-port-mdpi-screen.png" />
+	<splash platform="android" qualifier="port-hdpi" src="res/screens/android/drawable-port-hdpi-screen.png" />
+	<splash platform="android" qualifier="port-xhdpi" src="res/screens/android/drawable-port-xhdpi-screen.png" />
+	 
+	<splash platform="android" qualifier="land-ldpi" src="res/screens/android/drawable-land-ldpi-screen.png" />
+	<splash platform="android" qualifier="land-mdpi" src="res/screens/android/drawable-land-mdpi-screen.png" />
+	<splash platform="android" qualifier="land-hdpi" src="res/screens/android/drawable-land-hdpi-screen.png" />
+	<splash platform="android" qualifier="land-xhdpi" src="res/screens/android/drawable-land-xhdpi-screen.png" />
+	
+
+	<splash src="splash.png" />
+	<preference name="SplashScreenDelay" value="5000" />
+	
+	</platform>
+	
+	<plugin name="cordova-plugin-device" spec="2.0.1" />
+	<plugin name="cordova-plugin-dialogs" spec="2.0.1" />
+	<plugin name="cordova-plugin-network-information" spec="2.0.1" />
+	<plugin name="cordova-plugin-device-motion"  />
+	<plugin name="cordova-plugin-splashscreen"  />
+	<plugin name="cordova-plugin-contacts"  />
+	
+
+
+
+</widget>
