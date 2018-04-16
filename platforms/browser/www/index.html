@@ -4,6 +4,7 @@
 		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 		<script src="js/pgb.js"></script>
 		<script src="cordova.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 	</head>
 	<body >
 		<h1>Hello World!</h1>
@@ -27,7 +28,7 @@
 <button></button>
 
 
-<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+
 <script>
   // Initialize Firebase
   var config = {
@@ -41,10 +42,11 @@
   firebase.initializeApp(config);
 
 
-  var provider = new firebase.auth.GoogleAuthProvider();
+  const provider = new firebase.auth.GoogleAuthProvider();
+	
+document.querySelector('#googleLogIn').addEventListener('click', function () {
 	provider.addScope('profile');
 	provider.addScope('email');
-document.querySelector('#googleLogIn').addEventListener('click', function () {
   firebase.auth().signInWithRedirect(provider).then(function() {
   return firebase.auth().getRedirectResult();
 }).then(function(result) {
@@ -65,22 +67,22 @@ document.querySelector('#googleLogIn').addEventListener('click', function () {
 }); 
 
 
-window.addEventListener("load", function(){
-firebase.auth().getRedirectResult().then(function(result) {
-  if (result.credential) {
-    // This gives you a Google Access Token.
-    // You can use it to access the Google API.
-    var token = result.credential.accessToken;
-    // The signed-in user info.
-    var user = result.user;
-    // ...
-  }
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-});
-});
+// window.addEventListener("load", function(){
+// firebase.auth().getRedirectResult().then(function(result) {
+//   if (result.credential) {
+//     // This gives you a Google Access Token.
+//     // You can use it to access the Google API.
+//     var token = result.credential.accessToken;
+//     // The signed-in user info.
+//     var user = result.user;
+//     // ...
+//   }
+// }).catch(function(error) {
+//   // Handle Errors here.
+//   var errorCode = error.code;
+//   var errorMessage = error.message;
+// });
+// });
 
 </script>
 </body>
