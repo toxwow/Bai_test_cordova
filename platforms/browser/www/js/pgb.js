@@ -6,18 +6,7 @@ function onDeviceReady() {
 	
     console.log(navigator.contacts);
 
-     var config = {
-    apiKey: "AIzaSyD4EQnrBQVllUnqf-d4mFKdp8-A30ijO5w",
-    authDomain: "test-cordova-e76a7.firebaseapp.com",
-    databaseURL: "https://test-cordova-e76a7.firebaseio.com",
-    projectId: "test-cordova-e76a7",
-    storageBucket: "test-cordova-e76a7.appspot.com",
-    messagingSenderId: "963862409062"
-  };
-  firebase.initializeApp(config);
-
-}
-
+ 
 function deviceInfo() {
 
 	info =  'Hi, I am your smartphone :-)' + '\n' +
