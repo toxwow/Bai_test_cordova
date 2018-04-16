@@ -6,7 +6,7 @@ function onDeviceReady() {
 	
     console.log(navigator.contacts);
 
- 
+ }
 function deviceInfo() {
 
 	info =  'Hi, I am your smartphone :-)' + '\n' +
