@@ -1,0 +1,42 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-browsertab": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-plugin-buildinfo": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-plugin-contacts": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-plugin-device-motion": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "text.cordova"
+    },
+    "cordova-universal-links-plugin": {
+      "PACKAGE_NAME": "text.cordova"
+    }
+  },
+  "dependent_plugins": {}
+}
