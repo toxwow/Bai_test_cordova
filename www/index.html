@@ -5,8 +5,31 @@
 		
 		
 		
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
 		<script src="js/pgb.js"></script>
 		<script src="cordova.js"></script>
+		<script type="text/javascript">
+			
+			  var config = {
+    apiKey: "AIzaSyD4EQnrBQVllUnqf-d4mFKdp8-A30ijO5w",
+    authDomain: "test-cordova-e76a7.firebaseapp.com",
+    databaseURL: "https://test-cordova-e76a7.firebaseio.com",
+    projectId: "test-cordova-e76a7",
+    storageBucket: "test-cordova-e76a7.appspot.com",
+    messagingSenderId: "963862409062"
+  };
+  if (!firebase.apps.length) {
+    firebase.initializeApp(config);
+}
+
+
+  // const provider = new firebase.auth.GoogleAuthProvider();
+
+  var provider = new firebase.auth.GoogleAuthProvider();
+		</script>
 	</head>
 	<body onload="init()">
 		<h1>Hello Marian231231321!</h1>
@@ -30,30 +53,11 @@
 <button></button>
 
 
-		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
 <script>
   // Initialize Firebase
    
 
-    var config = {
-    apiKey: "AIzaSyD4EQnrBQVllUnqf-d4mFKdp8-A30ijO5w",
-    authDomain: "test-cordova-e76a7.firebaseapp.com",
-    databaseURL: "https://test-cordova-e76a7.firebaseio.com",
-    projectId: "test-cordova-e76a7",
-    storageBucket: "test-cordova-e76a7.appspot.com",
-    messagingSenderId: "963862409062"
-  };
-  if (!firebase.apps.length) {
-    firebase.initializeApp(config);
-}
-
-
-  // const provider = new firebase.auth.GoogleAuthProvider();
-
-  var provider = new firebase.auth.GoogleAuthProvider();
+  
 
 document.querySelector('#googleLogIn').addEventListener('click', function () {
 firebase.auth().signInWithRedirect(provider).then(function() {
