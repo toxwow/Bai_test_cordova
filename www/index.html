@@ -9,6 +9,7 @@
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-app.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-storage.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-database.js"></script>
 		<script src="js/pgb.js"></script>
 		<script src="cordova.js"></script>
 		<script type="text/javascript">
@@ -24,11 +25,13 @@
   if (!firebase.apps.length) {
     firebase.initializeApp(config);
 }
-
+ // Get a reference to the database service
+  var database = firebase.database();
 
   // const provider = new firebase.auth.GoogleAuthProvider();
 
   var provider = new firebase.auth.GoogleAuthProvider();
+
 		</script>
 	</head>
 	<body onload="init()">
@@ -45,12 +48,14 @@
 <input type="button" onclick="checkConnection()" value="test internet">
 <hr>
 <input type="button" onclick="getContactFields()" value="test kontakt">
-
+<br>
+<input type="text" name="walczak" id="walczak">
+<button onclick="getData()"></button>
 
 
 
 <button id="googleLogIn" onclick="signin()">Google</button>
-<button></button>
+<button onclick="writeUserData(56, name, 'walczak@to.chuj', 'imageUrl')">asdasd</button>
 
 
 <script>
@@ -76,6 +81,19 @@ firebase.auth().signInWithRedirect(provider).then(function() {
 });
 });
     
+    function writeUserData(userId, name, email, imageUrl) {
+    	var name = document.getElementById('walczak').value;
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
+
+// function getData(){
+// 	var x = document.getElementById('walczak').value;
+// 	alert(x);
+// }
 // document.querySelector('#googleLogIn').addEventListener('click', function () {
 //     // provider.addScope('profile');
 //     // provider.addScope('email');
